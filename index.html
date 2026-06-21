@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hpy Ghandhis</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+background:#07111f;
+background-image:
+radial-gradient(circle at 15% 20%,#4338ca 0,transparent 35%),
+radial-gradient(circle at 85% 20%,#0891b2 0,transparent 35%);
+}
+
+.card{
+width:420px;
+max-width:100%;
+padding:28px;
+border-radius:28px;
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(18px);
+border:1px solid rgba(255,255,255,.15);
+color:#fff;
+}
+
+.emoji-profile{
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:110px;
+margin-bottom:10px;
+}
+
+.rgb{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:8px;
+font-size:34px;
+font-weight:800;
+white-space:nowrap;
+background:linear-gradient(
+90deg,
+#ffffff,
+#8fd3ff,
+#5ca8ff,
+#a56bff,
+#ffffff
+);
+background-size:350%;
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+animation:shine 5s linear infinite;
+background-position:var(--rgb-pos,0%);
+filter:drop-shadow(0 0 6px rgba(92,168,255,.45));
+}
+
+@keyframes shine{
+from{
+background-position:0;
+}
+to{
+background-position:300%;
+}
+}
+
+.bio-rgb{
+text-align:center;
+font-size:clamp(18px,2.6vw,22px);
+font-weight:700;
+margin:10px 0 20px;
+display:flex;
+justify-content:center;
+align-items:center;
+gap:8px;
+}
+
+.bio-text{
+background:linear-gradient(
+90deg,
+#ffffff,
+#8fd3ff,
+#5ca8ff,
+#a56bff,
+#ffffff
+);
+background-size:350%;
+background-position:var(--rgb-pos,0%);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+animation:shine 5s linear infinite;
+}
+
+.bio-emoji{
+color:#fff;
+-webkit-text-fill-color:initial;
+font-size:1em;
+}
+
+.badge{
+width:22px;
+height:22px;
+margin-left:2px;
+flex:none;
+filter:drop-shadow(0 0 4px rgba(56,189,248,.7));
+}
+
+p{
+text-align:center;
+color:#ddd;
+margin:8px 0 20px;
+}
+
+.tabs{
+display:flex;
+gap:10px;
+}
+
+.tabs button{
+flex:1;
+padding:12px;
+border:0;
+border-radius:12px;
+background:#ffffff20;
+color:#fff;
+cursor:pointer;
+}
+
+.tabs .active{
+background:#3b82f6;
+}
+
+.list{
+margin-top:18px;
+}
+
+.item{
+display:flex;
+justify-content:space-between;
+align-items:center;
+text-decoration:none;
+color:#fff;
+background:rgba(255,255,255,.08);
+padding:16px;
+border-radius:16px;
+margin:10px 0;
+transition:.25s;
+}
+
+.item:hover{
+background:rgba(255,255,255,.12);
+}
+
+.rgb-link{
+background:linear-gradient(
+90deg,
+#ffffff,
+#8fd3ff,
+#5ca8ff,
+#a56bff,
+#ffffff
+);
+background-size:350%;
+background-position:var(--rgb-pos,0%);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+animation:shine 5s linear infinite;
+font-weight:700;
+}
+
+.item i{
+color:#fff;
+}
+
+.modal{
+position:fixed;
+inset:0;
+background:#0008;
+display:none;
+justify-content:center;
+align-items:center;
+z-index:999;
+}
+
+.box{
+background:#172334;
+padding:24px;
+border-radius:16px;
+width:320px;
+text-align:center;
+}
+
+.face{
+font-size:34px;
+}
+
+.btn{
+margin-top:16px;
+padding:10px 18px;
+border:0;
+border-radius:10px;
+background:#3b82f6;
+color:#fff;
+cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<div class="emoji-profile">😎</div>
+
+<div class="rgb">
+Hpy Ghandhis
+
+<svg class="badge" viewBox="0 0 32 32" aria-hidden="true">
+<defs>
+<linearGradient id="vb" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" stop-color="#38bdf8"/>
+<stop offset="100%" stop-color="#7c3aed"/>
+</linearGradient>
+</defs>
+
+<circle cx="16" cy="16" r="14" fill="url(#vb)"/>
+
+<path
+d="M10.8 16.4l3.2 3.2 7.2-7.2"
+fill="none"
+stroke="#fff"
+stroke-width="2.8"
+stroke-linecap="round"
+stroke-linejoin="round"/>
+</svg>
+
+</div>
+
+<p class="bio-rgb">
+<span class="bio-emoji">👊</span>
+<span class="bio-text">Welcome Bro And Bestie</span>
+<span class="bio-emoji">😎</span>
+</p>
+
+<div class="tabs">
+<button class="active">Links</button>
+<button onclick="produk()">Product</button>
+</div>
+
+<div class="list">
+
+<a class="item"
+href="https://hpyghandhisofficial.github.io/community/"
+target="_blank">
+<span class="rgb-link">Join To Community</span>
+<i class="fa-solid fa-chevron-right"></i>
+</a>
+
+<a class="item" href="#" onclick="err(event)">
+<span class="rgb-link">X / Twitter</span>
+<i class="fa-solid fa-chevron-right"></i>
+</a>
+
+<a class="item" href="#" onclick="err(event)">
+<span class="rgb-link">YouTube</span>
+<i class="fa-solid fa-chevron-right"></i>
+</a>
+
+<a class="item" href="#" onclick="err(event)">
+<span class="rgb-link">Instagram</span>
+<i class="fa-solid fa-chevron-right"></i>
+</a>
+
+<a class="item" href="#" onclick="err(event)">
+<span class="rgb-link">Threads</span>
+<i class="fa-solid fa-chevron-right"></i>
+</a>
+
+<a class="item" href="#" onclick="err(event)">
+<span class="rgb-link">TikTok</span>
+<i class="fa-solid fa-chevron-right"></i>
+</a>
+
+<a class="item" href="#" onclick="err(event)">
+<span class="rgb-link">Douyin</span>
+<i class="fa-solid fa-chevron-right"></i>
+</a>
+
+<a class="item" href="#" onclick="err(event)">
+<span class="rgb-link">Facebook</span>
+<i class="fa-solid fa-chevron-right"></i>
+</a>
+
+</div>
+
+</div>
+
+<div id="m" class="modal">
+<div class="box">
+<div class="face">¯\_(ツ)_/¯</div>
+<p id="msg"></p>
+<button class="btn" onclick="m.style.display='none'">
+Tutup
+</button>
+</div>
+</div>
+
+<script>
+
+const m=document.getElementById('m');
+const msg=document.getElementById('msg');
+
+function err(e){
+e.preventDefault();
+msg.textContent='Sepertinya Ada Yang Salah Di Sini, Silakan Coba Lagi';
+m.style.display='flex';
+}
+
+function produk(){
+msg.textContent='Saat Ini Produk Belum Tersedia Di Negara Anda, Silakan Coba Lagi';
+m.style.display='flex';
+}
+
+const saved=localStorage.getItem('rgbPos');
+
+if(saved){
+document.documentElement.style.setProperty('--rgb-pos',saved+'%');
+}
+
+let pos=parseFloat(saved||0);
+
+setInterval(()=>{
+pos=(pos+1)%350;
+document.documentElement.style.setProperty('--rgb-pos',pos+'%');
+localStorage.setItem('rgbPos',pos);
+},80);
+
+</script>
+
+</body>
+</html>
